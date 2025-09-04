@@ -1,0 +1,47 @@
+.resourceBrowser {
+  height: 100%;
+  background-color: white;
+}
+
+.schemaGroup {
+  margin-bottom: 8px;
+}
+
+.schemaHeader {
+  padding: 6px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.schemaHeader:hover {
+  background-color: var(--mantine-color-gray-1);
+}
+
+.resourceItem {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.resourceItem:hover {
+  background-color: var(--mantine-color-gray-1);
+}
+
+.resourceItem.selected {
+  background-color: var(--mantine-color-blue-0);
+  border-color: var(--mantine-color-blue-3);
+}
+
+.resourceInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.resourceName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

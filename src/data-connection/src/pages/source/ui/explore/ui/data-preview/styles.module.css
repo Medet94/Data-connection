@@ -1,0 +1,31 @@
+.table-container {
+  max-height: 400px;
+  border: 1px solid var(--mantine-color-gray-3);
+  border-radius: 4px;
+}
+
+.data-table {
+  margin: 0;
+}
+
+.column-header {
+  background-color: var(--mantine-color-gray-1);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.column-header:hover {
+  background-color: var(--mantine-color-gray-2);
+}
+
+.cell {
+  max-width: 200px;
+  padding: 8px 12px;
+}
+
+.cell-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

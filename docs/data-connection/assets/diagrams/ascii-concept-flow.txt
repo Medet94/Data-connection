@@ -1,0 +1,11 @@
+```
++-------------------+        +-------------------+        +-------------------+        +-------------------+
+|   DATA SOURCE     |        |    CONNECTION     |        |       SYNC        |        |     PHOENIX       |
+|                   |        |                   |        |                   |        |                   |
+| Where data lives: |        | How data is       |        | What data moves:  |        | Data ready for    |
+| - PostgreSQL      +------->+ reached:          +------->+ - Specific tables +------->+ use in:           |
+| - S3 storage      |        | - Direct          |        | - Selected files  |        | - Applications    |
+| - Files           |        | - Agent-based     |        | - Filtered data   |        | - Dashboards      |
+| - APIs            |        |                   |        | - Set schedule    |        | - Analysis        |
++-------------------+        +-------------------+        +-------------------+        +-------------------+
+```

@@ -1,0 +1,26 @@
+digraph DataConnectionConceptFlow {
+    // Define the node styles
+    node [shape=box, style=filled, fontname="Arial", fontsize=12];
+    edge [fontname="Arial", fontsize=10];
+    
+    // Define the nodes
+    DataSource [label="DATA SOURCE\nWhere your data lives\n(PostgreSQL, S3, etc.)", fillcolor="#ffcc99", shape=cylinder];
+    
+    Connection [label="CONNECTION\nHow Phoenix reaches your data", fillcolor="#99ccff"];
+    ConnectionTypes [label="Direct Connection | Agent Connection", fillcolor="#ccccff", shape=record];
+    
+    Sync [label="SYNC\nWhat specific data moves and when", fillcolor="#99ff99"];
+    SyncTypes [label="Table A | Table B | Files | Filtered Data", fillcolor="#ccffcc", shape=record];
+    
+    Phoenix [label="PHOENIX PLATFORM\nData available for use", fillcolor="#e6ccff"];
+    
+    // Define the relationships
+    DataSource -> Connection [label="connects through"];
+    Connection -> ConnectionTypes [label="types"];
+    Connection -> Sync [label="enables"];
+    Sync -> SyncTypes [label="types"];
+    Sync -> Phoenix [label="loads data into"];
+    
+    // Layout direction
+    rankdir=LR;
+}
