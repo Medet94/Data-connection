@@ -1,0 +1,75 @@
+.stageContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+}
+
+.title {
+  color: var(--mantine-color-gray-9);
+  text-align: start;
+}
+
+.outputCard,
+.structureCard {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.selectedFolder {
+  background-color: var(--mantine-color-yellow-0);
+  border-color: var(--mantine-color-yellow-3);
+}
+
+.defaultFolder {
+  background-color: var(--mantine-color-gray-0);
+  border-color: var(--mantine-color-gray-3);
+}
+
+.folderTree {
+  background-color: var(--mantine-color-gray-0);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--mantine-color-gray-3);
+}
+
+.treeItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.treeItem.nested {
+  margin-left: 24px;
+}
+
+.generatingItems {
+  background-color: var(--mantine-color-gray-0);
+  padding: 16px;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.foldersList {
+  max-height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.folderItem {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.folderItem:hover {
+  background-color: var(--mantine-color-blue-0);
+  border-color: var(--mantine-color-blue-3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

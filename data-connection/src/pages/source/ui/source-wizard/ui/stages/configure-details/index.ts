@@ -1,0 +1,1 @@
+export { ConfigureDetails } from './ConfigureDetails';

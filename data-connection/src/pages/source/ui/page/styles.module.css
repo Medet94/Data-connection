@@ -1,0 +1,65 @@
+.page {
+  background-color: #F6F7F9;
+  min-height: 100%;
+}
+
+.page-container {
+}
+
+.welcome-section {
+  padding: 15px 130px;
+  background: white;
+}
+
+.setup-card {
+  background: white !important;
+  border: 1px solid rgba(17, 20, 24, 0.15);
+  border-radius: 3px;
+  box-shadow: 0px 0px 0px 0px rgba(17, 20, 24, 0.2), 
+              0px 0px 0px 0px rgba(17, 20, 24, 0.2), 
+              0px 0px 0px 1px rgba(17, 20, 24, 0.1);
+  padding: 10px;
+}
+
+.main-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.171875em;
+  color: #1C2127;
+  margin: 0;
+}
+
+.main-description {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.171875em;
+  color: rgba(28, 33, 39, 0.5);
+}
+
+.setup-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.171875em;
+  color: #1C2127;
+  margin: 0;
+}
+
+.filter-panel-section {
+  padding: 0 130px;
+}
+
+.recent-connections-section {
+  padding: 0 130px;
+}
+
+.see-all-link {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.see-all-link:hover {
+  opacity: 0.8;
+}

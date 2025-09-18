@@ -1,0 +1,176 @@
+.stageContainer {
+  width: 100%;
+  padding: 20px;
+}
+
+.mainLayout {
+  display: grid;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+/* Layout when panel is closed - full width for main content */
+.panelClosed {
+  grid-template-columns: 1fr;
+}
+
+/* Layout when panel is open - main content + right panel */
+.panelOpen {
+  grid-template-columns: 1fr 400px;
+}
+
+.mainContent {
+  min-width: 0; /* Prevents grid overflow */
+}
+
+.rightPanel {
+  min-width: 0; /* Prevents grid overflow */
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.title {
+  color: var(--mantine-color-gray-9);
+  text-align: start;
+}
+
+.toggleButton {
+  transition: all 0.2s ease;
+}
+
+.toggleButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formCard,
+.testCard,
+.previewCard,
+.previewPanel {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.previewPanel {
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+  border-left: 3px solid var(--mantine-color-blue-5);
+}
+
+.previewContent,
+.previewLoading,
+.previewError {
+  padding: 20px 16px;
+  text-align: center;
+}
+
+.previewSuccess {
+  /* Additional styles for successful connection state */
+}
+
+.previewButton {
+  background: var(--mantine-color-blue-5);
+  color: white;
+  border: none;
+}
+
+.previewButton:hover {
+  background: var(--mantine-color-blue-6);
+}
+
+.resourceList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.resourceSection {
+  border-bottom: 1px solid var(--mantine-color-gray-2);
+  padding-bottom: 12px;
+}
+
+.resourceSection:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.resourceItem {
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.resourceItem:hover {
+  background-color: var(--mantine-color-gray-0);
+}
+
+/* Visual indicator for panel toggle */
+.panelClosed .toggleButton {
+  background-color: var(--mantine-color-blue-0);
+  border-color: var(--mantine-color-blue-3);
+}
+
+.panelOpen .toggleButton {
+  background-color: var(--mantine-color-gray-0);
+  border-color: var(--mantine-color-gray-4);
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .panelOpen,
+  .panelClosed {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .rightPanel {
+    order: -1; /* Move right panel above form on mobile */
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .previewPanel {
+    position: relative;
+    top: auto;
+  }
+}
+
+/* Subtle animations */
+.formCard {
+  transition: all 0.2s ease;
+}
+
+.panelOpen .formCard {
+  /* Slightly reduce width when panel is open for better visual balance */
+}
+
+.panelClosed .formCard {
+  /* Full width when panel is closed */
+}
