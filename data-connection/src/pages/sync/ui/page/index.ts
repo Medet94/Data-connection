@@ -1,1 +1,0 @@
-export {Sync} from './Page';

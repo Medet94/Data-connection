@@ -1,1 +1,0 @@
-export { TableDetailsModal } from './TableDetailsModal';
