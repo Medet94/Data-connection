@@ -37,14 +37,16 @@ export default function App() {
 
   return (
     <Center flex="center" h="100vh" bg="var(--mantine-color-body)">
-      <input
-        type="file"
-        accept="audio/*"
-        multiple
-        onChange={handleFiles}
-        style={{ marginBottom: 20 }}
-      />
-      <TrackCard track={track} onNext={() => nextTrackClicked()} />
+      <Flex
+        align="center"
+        justify="center"
+        gap="xl"
+        wrap="nowrap"
+        style={{ width: '100%' }}
+      >
+        <MusicPlayer />
+        <TrackCard track={track} onNext={() => nextTrackClicked()} />
+      </Flex>
     </Center>
   );
 }

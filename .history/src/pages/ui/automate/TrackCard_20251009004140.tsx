@@ -98,7 +98,7 @@ export const TrackCard: React.FC<TrackCardProps> = ({ track, onNext }) => {
       radius="lg"
       padding="md"
       withBorder
-      w={600}
+      w={200}
       style={{
         maxWidth: 420,
         background: 'var(--mantine-color-body)',
