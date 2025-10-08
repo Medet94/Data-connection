@@ -5,7 +5,7 @@ import { getUsersClicked } from '../../../shared/state/events';
 import '../../../shared/state/connections';
 
 export default function Counter() {
-  const [users, todo, loading] = useUnit([$users, $todos, $loading]);
+  const [users, loading, todo] = useUnit([$users, $todos, $loading]);
 
   console.log(users);
   console.log(todo);

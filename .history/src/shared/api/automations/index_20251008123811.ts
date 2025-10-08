@@ -5,7 +5,7 @@ export const getUsers = async () => {
   return response.data;
 };
 
-export const getTodos = async () => {
-  const response = await apiConfig.get('todos');
+export const getimages = async () => {
+  const response = await apiConfig.get('photos');
   return response.data;
 };
