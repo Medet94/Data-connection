@@ -20,6 +20,7 @@ interface TrackCardProps {
 
 export const TrackCard: React.FC<TrackCardProps> = ({ track, onNext }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const progressRef = useRef<HTMLDivElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
@@ -57,9 +58,38 @@ export const TrackCard: React.FC<TrackCardProps> = ({ track, onNext }) => {
       audio.pause();
       setIsPlaying(false);
     } else {
-      audio.play().catch((e) => console.error('Playback failed', e));
+      audio.play().catch((e) => console.error(e));
       setIsPlaying(true);
     }
+  };
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    setProgress(0);
+    setCurrentTime(0);
+
+    if (isPlaying) {
+      audio.play().catch((e) => console.error('Autoplay failed', e));
+    } else {
+      audio.pause();
+    }
+  }, [track]);
+
+  const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const audio = audioRef.current;
+    const progressEl = progressRef.current;
+    if (!audio || !progressEl) return;
+
+    const rect = progressEl.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const percent = Math.min(Math.max(clickX / rect.width, 0), 1); // clamp(0–1)
+    const newTime = percent * audio.duration;
+
+    audio.currentTime = newTime;
+    setProgress(percent * 100);
+    setCurrentTime(newTime);
   };
 
   return (
@@ -137,12 +167,15 @@ export const TrackCard: React.FC<TrackCardProps> = ({ track, onNext }) => {
         </Group>
       </Group>
 
-      <Progress
-        value={progress}
-        color={track?.popularity > 80 ? 'red' : 'blue'}
-        radius="xl"
-        size="sm"
-      />
+      <div ref={progressRef} onClick={handleProgressClick}>
+        <Progress
+          value={progress}
+          color="blue"
+          radius="xl"
+          size="sm"
+          style={{ cursor: 'pointer' }}
+        />
+      </div>
 
       <Group justify="space-between" mt="md">
         <Group>

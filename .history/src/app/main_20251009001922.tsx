@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { MantineProvider } from '@mantine/core';
-import AutomationsPage from '../pages/ui/automate/App';
+import AutomationsPage from '../pages/ui/automate/UI';
 import './index.css';
 import '@mantine/core/styles.css';
 
