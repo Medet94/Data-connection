@@ -11,9 +11,7 @@ export const $todos = createStore([]);
 
 $todos.on(getTodosListFx.doneData, (_, todo) => todo);
 
-export const $audios = createStore<Track[]>([]);
+export const $audios = createStore<Track | null>(null);
 export const $load = getAudiosFx.pending;
 
 $audios.on(getAudiosFx.doneData, (_, audio) => audio);
-
-export const $currentTrackIndex = createStore(0);

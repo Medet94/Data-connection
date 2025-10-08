@@ -1,6 +1,6 @@
 import { createEffect } from 'effector';
 import { getUsers, getTodos } from '../../api/automations';
-import { getTracks } from '../../api/automations/audio';
+import {  } from '../../api/automations'
 
 export const getUsersListFx = createEffect(async () => {
   return await getUsers();
@@ -10,6 +10,4 @@ export const getTodosListFx = createEffect(async () => {
   return await getTodos();
 });
 
-export const getAudiosFx = createEffect(async () => {
-  return await getTracks();
-});
+export

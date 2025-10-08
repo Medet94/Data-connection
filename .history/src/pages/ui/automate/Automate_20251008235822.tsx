@@ -19,7 +19,7 @@ export default function Counter() {
 
   return (
     <Center h="100vh" bg="var(--mantine-color-body)">
-      <TrackCard track={track} onNext={() => nextTrackClicked()} />
+      <TrackCard track={track} />
     </Center>
   );
 }

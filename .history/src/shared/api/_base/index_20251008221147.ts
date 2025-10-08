@@ -4,6 +4,6 @@ export const apiConfig = axios.create({
   baseURL: 'https://jsonplaceholder.typicode.com/',
 });
 
-export const audioApiConfig = axios.create({
+export const trackApiConfig = axios.create({
   baseURL: 'http://localhost:4000/',
 });

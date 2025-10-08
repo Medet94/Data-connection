@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "alice",
+      "displayName": "Alice",
+      "email": "alice@example.com",
+      "favoriteGenres": ["pop", "indie"]
+    }
+  ],
+  "artists": [
+    { "id": 1, "name": "Neon Wave", "bio": "Synthpop band", "country": "US" },
+    {
+      "id": 2,
+      "name": "Forest Echoes",
+      "bio": "Ambient solo project",
+      "country": "SE"
+    }
+  ],
+  "albums": [
+    {
+      "id": 1,
+      "title": "Midnight Drive",
+      "artistId": 1,
+      "year": 2023,
+      "coverUrl": "https://cdn.example.com/covers/midnight-drive.jpg"
+    }
+  ],
+  "tracks": [
+    {
+      "id": 1,
+      "title": "City Lights",
+      "artistId": 1,
+      "albumId": 1,
+      "duration": 215,
+      "mediaUrl": "https://cdn.example.com/media/track-1.mp3",
+      "explicit": false,
+      "popularity": 87,
+      "tags": ["synthpop", "drive"]
+    },
+    {
+      "id": 2,
+      "title": "Forest Morning",
+      "artistId": 2,
+      "albumId": null,
+      "duration": 480,
+      "mediaUrl": "https://cdn.example.com/media/track-2.mp3",
+      "explicit": false,
+      "popularity": 45,
+      "tags": ["ambient", "calm"]
+    }
+  ],
+  "playlists": [
+    {
+      "id": 1,
+      "title": "Chill Drive",
+      "ownerId": 1,
+      "trackIds": [1, 2],
+      "public": true,
+      "createdAt": "2025-10-01T10:00:00Z"
+    }
+  ],
+  "sessions": []
+}

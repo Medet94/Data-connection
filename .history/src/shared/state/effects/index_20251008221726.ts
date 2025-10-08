@@ -10,6 +10,6 @@ export const getTodosListFx = createEffect(async () => {
   return await getTodos();
 });
 
-export const getAudiosFx = createEffect(async () => {
+export const getAudios = createEffect(async () => {
   return await getTracks();
 });

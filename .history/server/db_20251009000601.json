@@ -1,0 +1,97 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "alice",
+      "displayName": "Alice",
+      "email": "alice@example.com",
+      "favoriteGenres": ["pop", "indie"]
+    }
+  ],
+  "artists": [
+    { "id": 1, "name": "Neon Wave", "bio": "Synthpop band", "country": "US" },
+    {
+      "id": 2,
+      "name": "Forest Echoes",
+      "bio": "Ambient solo project",
+      "country": "SE"
+    }
+  ],
+  "albums": [
+    {
+      "id": 1,
+      "title": "Midnight Drive",
+      "artistId": 1,
+      "year": 2023,
+      "coverUrl": "https://cdn.example.com/covers/midnight-drive.jpg"
+    }
+  ],
+  "tracks": [
+    {
+      "id": 1,
+      "title": "City Lights",
+      "artist": { "id": 1, "name": "Neon Wave" },
+      "album": { "id": 1, "title": "Midnight Drive" },
+      "duration": 215,
+      "mediaUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+      "explicit": false,
+      "popularity": 87,
+      "tags": ["synthpop", "drive"]
+    },
+    {
+      "id": 2,
+      "title": "Forest Morning",
+      "artist": { "id": 2, "name": "AmbientCalm" },
+      "album": { "id": 2, "title": "Nature Echoes" },
+      "duration": 480,
+      "mediaUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+      "explicit": false,
+      "popularity": 72,
+      "tags": ["ambient", "calm"]
+    },
+    {
+      "id": 3,
+      "title": "Night Ride",
+      "artist": { "id": 3, "name": "RetroDrive" },
+      "album": { "id": 3, "title": "Neon Streets" },
+      "duration": 230,
+      "mediaUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+      "explicit": false,
+      "popularity": 91,
+      "tags": ["retrowave", "synthwave"]
+    },
+    {
+      "id": 4,
+      "title": "Ocean Sky",
+      "artist": { "id": 4, "name": "Blue Horizon" },
+      "album": { "id": 4, "title": "Sea Dreams" },
+      "duration": 360,
+      "mediaUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+      "explicit": false,
+      "popularity": 65,
+      "tags": ["chill", "ocean"]
+    },
+    {
+      "id": 5,
+      "title": "Midnight Jazz",
+      "artist": { "id": 5, "name": "SmoothMood" },
+      "album": { "id": 5, "title": "Cafe Sessions" },
+      "duration": 310,
+      "mediaUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
+      "explicit": false,
+      "popularity": 78,
+      "tags": ["jazz", "lounge"]
+    }
+  ],
+  "playlists": [
+    {
+      "id": 1,
+      "title": "Chill Drive",
+      "ownerId": 1,
+      "trackIds": [1, 2],
+      "public": true,
+      "createdAt": "2025-10-01T10:00:00Z"
+    }
+  ],
+  "sessions": []
+}

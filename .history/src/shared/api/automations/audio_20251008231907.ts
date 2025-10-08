@@ -1,0 +1,6 @@
+import { audioApiConfig } from '../_base';
+
+export const getTracks = async () => {
+  const response = await audioApiConfig.get('tracks');
+  return response.data;
+};
