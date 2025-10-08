@@ -1,10 +1,8 @@
 import { sample } from 'effector';
-import { getUsersClicked } from '../events';
 import { getUsersListFx } from '../effects';
+import { getUsersClicked } from '../events';
 
 sample({
   clock: getUsersClicked,
   target: getUsersListFx,
 });
-
-console.log('connections loaded');

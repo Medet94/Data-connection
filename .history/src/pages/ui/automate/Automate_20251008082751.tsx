@@ -1,26 +1,26 @@
 import { useUnit } from 'effector-react';
 import { Button } from '@mantine/core';
-import { $users, $loading } from '../../../shared/state/stores';
-import { getUsersClicked } from '../../../shared/state/events';
-import '../../../shared/state/connections';
+import { $products, $loading } from '../../../shared/state/stores';
+import { getProductsClicked } from '../../../shared/state/events';
 
 export default function Counter() {
-  const [users, loading] = useUnit([$users, $loading]);
+  const [product, loading] = useUnit([$products, $loading]);
 
   console.log(loading);
-  console.log(users);
+  console.log(product);
 
   return (
     <div style={{ textAlign: 'center', marginTop: 50 }}>
+      <h2>Effector Counter with Effect</h2>
       <div style={{ display: 'flex', gap: 20, justifyContent: 'center' }}>
-        <Button onClick={() => getUsersClicked()}>
+        <Button onClick={() => getProductsClicked()}>
           {' '}
           {loading ? 'Loading...' : 'Load'}
         </Button>
       </div>
       <ul>
-        {users.map((user: any) => (
-          <li key={user.name}>{user.email}</li>
+        {product.map((p: any) => (
+          <li key={p.name}>{p.email}</li>
         ))}
       </ul>
     </div>

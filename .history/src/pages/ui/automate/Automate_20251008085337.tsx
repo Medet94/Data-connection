@@ -1,8 +1,7 @@
 import { useUnit } from 'effector-react';
 import { Button } from '@mantine/core';
-import { $users, $loading } from '../../../shared/state/stores';
-import { getUsersClicked } from '../../../shared/state/events';
-import '../../../shared/state/connections';
+// import { } from '../../../shared/state/stores';
+import {  $users, $loadingб getUsersClicked } from '../../../shared/state';
 
 export default function Counter() {
   const [users, loading] = useUnit([$users, $loading]);

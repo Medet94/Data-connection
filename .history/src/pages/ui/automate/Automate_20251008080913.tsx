@@ -1,0 +1,31 @@
+import { useEffect } from 'react';
+import { useUnit } from 'effector-react';
+import { $products, $loading } from '../../../shared/state/stores';
+import { getProductsClicked } from '../../../shared/state/events';
+
+export default function Counter() {
+  const [product, loading] = useUnit([$products, $loading]);
+
+  const loadCount = async () => {
+    try {
+      getProductsClicked();
+    } finally {
+    }
+  };
+
+  useEffect(() => {
+    loadCount();
+  }, []);
+
+  console.log(loading);
+  console.log(product);
+
+  return (
+    <div style={{ textAlign: 'center', marginTop: 50 }}>
+      <h2>Effector Counter with Effect</h2>
+      <div style={{ display: 'flex', gap: 20, justifyContent: 'center' }}>
+        {loading ? 'Loading...' : 'Load'}
+      </div>
+    </div>
+  );
+}

@@ -6,5 +6,3 @@ sample({
   clock: getUsersClicked,
   target: getUsersListFx,
 });
-
-console.log('connections loaded');

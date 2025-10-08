@@ -2,7 +2,7 @@ import { useUnit } from 'effector-react';
 import { Button } from '@mantine/core';
 import { $users, $loading } from '../../../shared/state/stores';
 import { getUsersClicked } from '../../../shared/state/events';
-import '../../../shared/state/connections';
+import { getUsersListFx } from '../../../shared/state/effects';
 
 export default function Counter() {
   const [users, loading] = useUnit([$users, $loading]);
@@ -12,6 +12,7 @@ export default function Counter() {
 
   return (
     <div style={{ textAlign: 'center', marginTop: 50 }}>
+      <h2>Effector Counter with Effect</h2>
       <div style={{ display: 'flex', gap: 20, justifyContent: 'center' }}>
         <Button onClick={() => getUsersClicked()}>
           {' '}
@@ -19,8 +20,8 @@ export default function Counter() {
         </Button>
       </div>
       <ul>
-        {users.map((user: any) => (
-          <li key={user.name}>{user.email}</li>
+        {users.map((p: any) => (
+          <li key={p.name}>{p.email}</li>
         ))}
       </ul>
     </div>

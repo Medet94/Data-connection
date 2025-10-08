@@ -6,19 +6,18 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "allowJs": true,
 
     "baseUrl": "src",
     "paths": {
       "@/*": ["src/*"],
       "@shared/*": ["src/shared/*"],
-      "#/*": ["src/*"],
-      "*": ["*"]
+      "#/*": ["src/*"]
     },
 
     /* Bundler mode */
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
